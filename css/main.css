@@ -310,6 +310,12 @@ html[dir="ltr"] .product-detail-image{
   .media-grid {
     grid-template-columns: 1fr; 
   }
+  .media-item .img1,
+  .media-item .img2,
+  .media-item .video1,
+  .media-item .video2 {
+    border-radius: 10px !important;
+  }
 }
 .products .card{
   object-fit: cover;
