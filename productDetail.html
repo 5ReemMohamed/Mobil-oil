@@ -18,19 +18,30 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="100" tabindex="0">
 <header class="hero-section text-white">
-  <!-- Navbar Inside Header -->
+   <!-- Navbar Inside Header -->
   <nav class="navbar navbar-expand-lg hero-navbar navbar-dark position-fixed fixed-top z-3">
     <div class="container-fluid container-lg align-items-center">
-      
-      <!-- Logo -->
-      <a class="navbar-brand nav-logo" href="#">
-        <img src="imgs/logo.png" alt="Logo" class="logo text-center">
+     <!-- Logo -->
+    <a class="navbar-brand nav-logo" href="#">
+      <img src="imgs/logo.png" alt="Logo" class="logo text-center">
+    </a>
+
+    <!-- Center Cart on small screens -->
+    <div class="d-lg-none mx-auto">
+      <a href="cartProducts.html" class="position-relative d-inline-block">
+        <i class="fa-solid fa-cart-shopping fs-3 text-primary"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          1
+          <span class="visually-hidden">cart items</span>
+        </span>
       </a>
-      
-      <!-- Toggle button for mobile -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="قائمة التنقل">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    </div>
+
+    <!-- Toggle button for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="قائمة التنقل">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
       <!-- Links + Buttons -->
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -60,6 +71,16 @@
               <li><a class="dropdown-item" data-ar="صيانه المحركات " data-en="Engine maintenance" href="#">صيانة المحركات</a></li>
             </ul>
           </li>
+            <!-- Cart in large screens -->
+        <li class="nav-item d-none d-lg-block">
+          <a href="cartProducts.html" class="position-relative d-inline-block">
+            <i class="fa-solid fa-cart-shopping fs-4 text-primary"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              1
+              <span class="visually-hidden">cart items</span>
+            </span>
+          </a>
+        </li>
         </ul>
 
         <!-- Right-side Buttons -->
@@ -102,7 +123,7 @@
 
 <section class="py-5 product-detail bg-darkGray">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
-       <div class="card p-5">
+       <div class="card p-5 mb-5">
          <div class="row g-4 ">
             <div class="col-md-6">
                 <div class="inner">
@@ -126,6 +147,49 @@
             </div>
         </div>
        </div>
+         <div class="row justify-content-center">
+  <div class="col-lg-8">
+    <div class="details-card">
+      <div class="details-title text-center lang-text" data-en="Technical Details" data-ar="التفاصيل التقنية">
+        <i class="fas fa-info-circle me-2"></i>التفاصيل التقنية
+      </div>
+      <div class="table-responsive">
+        <table class="table details-table">
+          <tbody>
+            <tr>
+              <td class="icon-col"><i class="fas fa-industry"></i></td>
+              <td class="lang-text" data-en="Manufacturer" data-ar="الشركة المصنعة">الشركة المصنعة</td>
+              <td class="lang-text text-danger" data-en="Castrol EDGE" data-ar="كاسترول ايدج">كاسترول ايدج</td>
+            </tr>
+            <tr>
+              <td class="icon-col"><i class="fas fa-tags"></i></td>
+              <td class="lang-text" data-en="Brand" data-ar="العلامة التجارية">العلامة التجارية</td>
+              <td class="lang-text text-danger" data-en="Castrol EDGE" data-ar="كاسترول ايدج">كاسترول ايدج</td>
+            </tr>
+            <tr>
+              <td class="icon-col"><i class="fas fa-ruler-combined"></i></td>
+              <td class="lang-text" data-en="Package Dimensions" data-ar="أبعاد الشحنة">أبعاد الشحنة</td>
+              <td class="lang-text text-danger" data-en="32.1 x 31.7 x 15.7 cm; 3.57 kg" data-ar="32.1 × 31.7 × 15.7 سم; 3.57 كيلو جرام">
+                32.1 × 31.7 × 15.7 سم; 3.57 كيلو جرام
+              </td>
+            </tr>
+            <tr>
+              <td class="icon-col"><i class="fas fa-weight"></i></td>
+              <td class="lang-text" data-en="Item Weight" data-ar="وزن السلعة">وزن السلعة</td>
+              <td class="lang-text text-danger" data-en="3.57 Kilograms" data-ar="3.57 كيلو جرام">3.57 كيلو جرام</td>
+            </tr>
+            <tr>
+              <td class="icon-col"><i class="fas fa-oil-can"></i></td>
+              <td class="lang-text" data-en="Viscosity" data-ar="اللزوجة">اللزوجة</td>
+              <td class="lang-text text-danger" data-en="5W-40 SAE_Grade" data-ar="5W-40 SAE_Grade">5W-40 SAE_Grade</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>
 </section>
 
@@ -175,12 +239,12 @@
 
 <div class="fixed-contact-buttons">
   <!-- WhatsApp -->
-        <a href="https://wa.me/01017799332" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
+        <a href="https://wa.me/201017799332" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
           <i class="fab fa-whatsapp"></i>
         </a>
 
         <!-- Phone -->
-        <a href="tel:01017799332" class="phone-button" aria-label="Call Us">
+        <a href="tel:+201017799332" class="phone-button" aria-label="Call Us">
           <i class="fas fa-phone-alt"></i>
         </a>
         <button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top" class="scroll-top">

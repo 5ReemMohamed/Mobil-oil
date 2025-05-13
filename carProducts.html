@@ -18,19 +18,30 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="100" tabindex="0">
 <header class="hero-section text-white">
-  <!-- Navbar Inside Header -->
+   <!-- Navbar Inside Header -->
   <nav class="navbar navbar-expand-lg hero-navbar navbar-dark position-fixed fixed-top z-3">
     <div class="container-fluid container-lg align-items-center">
-      
-      <!-- Logo -->
-      <a class="navbar-brand nav-logo" href="#">
-        <img src="imgs/logo.png" alt="Logo" class="logo text-center">
+     <!-- Logo -->
+    <a class="navbar-brand nav-logo" href="#">
+      <img src="imgs/logo.png" alt="Logo" class="logo text-center">
+    </a>
+
+    <!-- Center Cart on small screens -->
+    <div class="d-lg-none mx-auto">
+      <a href="cartProducts.html" class="position-relative d-inline-block">
+        <i class="fa-solid fa-cart-shopping fs-3 text-primary"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          1
+          <span class="visually-hidden">cart items</span>
+        </span>
       </a>
-      
-      <!-- Toggle button for mobile -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="قائمة التنقل">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    </div>
+
+    <!-- Toggle button for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="قائمة التنقل">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
       <!-- Links + Buttons -->
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -60,6 +71,16 @@
               <li><a class="dropdown-item" data-ar="صيانه المحركات " data-en="Engine maintenance" href="#">صيانة المحركات</a></li>
             </ul>
           </li>
+            <!-- Cart in large screens -->
+        <li class="nav-item d-none d-lg-block">
+          <a href="cartProducts.html" class="position-relative d-inline-block">
+            <i class="fa-solid fa-cart-shopping fs-4 text-primary"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              1
+              <span class="visually-hidden">cart items</span>
+            </span>
+          </a>
+        </li>
         </ul>
 
         <!-- Right-side Buttons -->
@@ -263,12 +284,12 @@
 
 <div class="fixed-contact-buttons">
   <!-- WhatsApp -->
-        <a href="https://wa.me/01017799332" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
+        <a href="https://wa.me/201017799332" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
           <i class="fab fa-whatsapp"></i>
         </a>
 
         <!-- Phone -->
-        <a href="tel:01017799332" class="phone-button" aria-label="Call Us">
+        <a href="tel:+201017799332" class="phone-button" aria-label="Call Us">
           <i class="fas fa-phone-alt"></i>
         </a>
         <button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top" class="scroll-top">

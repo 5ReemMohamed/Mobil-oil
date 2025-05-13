@@ -19,74 +19,88 @@
     
 <header class="hero-section text-white">
   <!-- Navbar Inside Header -->
-  <nav class="navbar navbar-expand-lg hero-navbar navbar-dark position-fixed fixed-top z-3">
-    <div class="container-fluid container-lg align-items-center">
-      
-      <!-- Logo -->
-      <a class="navbar-brand nav-logo" href="#">
-        <img src="imgs/logo.png" alt="Logo" class="logo text-center">
+<nav class="navbar navbar-expand-lg hero-navbar navbar-dark position-fixed fixed-top z-3">
+  <div class="container-fluid container-lg align-items-center">
+    
+    <!-- Logo -->
+    <a class="navbar-brand nav-logo" href="#">
+      <img src="imgs/logo.png" alt="Logo" class="logo text-center">
+    </a>
+
+    <!-- Center Cart on small screens -->
+    <div class="d-lg-none mx-auto">
+      <a href="cartProducts.html" class="position-relative d-inline-block">
+        <i class="fa-solid fa-cart-shopping fs-3 text-primary"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          1
+          <span class="visually-hidden">cart items</span>
+        </span>
       </a>
-      
-      <!-- Toggle button for mobile -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="قائمة التنقل">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    </div>
 
-      <!-- Links + Buttons -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- Centered Links -->
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center gap-lg-4 gap-2 text-center">
-          <li class="nav-item">
-            <a class="nav-link active" href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about-us" data-ar="عن الشركة" data-en="About Us">عن الشركة</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#products" data-ar="المنتجات" data-en="Products">المنتجات</a>
-          </li>
-          <!-- Dropdown Menu -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-ar="أجزاءالمحركات" data-en="Engine parts" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              أجزاء المحركات
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" data-ar="المحركات الصغيرة" data-en="Small Engine" href="#">المحركات الصغيرة</a></li>
-              <li><a class="dropdown-item" data-ar="المحركات المتوسطه" data-en="Medium engines" href="#">المحركات المتوسطة</a></li>
-              <li><a class="dropdown-item" data-ar="المحركات الكبيره" data-en="large Engine" href="#">المحركات الكبيرة</a></li>
-              <li><a class="dropdown-item" data-ar="صيانه المحركات " data-en="Engine maintenance" href="#">صيانة المحركات</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="cartProducts.html">
-              <div class="position-relative d-inline-block">
-                <i class="fa-solid fa-cart-shopping fs-3"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  1
-                  <span class="visually-hidden">unread messages</span>
-                </span>
-              </div>
-            </a>
-          </li>
-        </ul>
+    <!-- Toggle button for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="قائمة التنقل">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <!-- Right-side Buttons -->
-        <div class="d-flex gap-2 justify-content-center mt-4 mt-lg-0 pb-4 pb-lg-0">
-          <a href="#contact" class="btn btn-danger" data-en="Get In Touch" data-ar="تواصل معنا">تواصل معنا</a>
-          <div class="language-switcher">
-            <select id="language-select" class="form-select">
-              <option value="ar">العربية</option>
-              <option value="en">English</option>
-            </select>
-          </div>
+    <!-- Navbar Links and Right Side -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Navbar links center -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center gap-lg-4 gap-2 text-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about-us" data-ar="عن الشركة" data-en="About Us">عن الشركة</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#products" data-ar="المنتجات" data-en="Products">المنتجات</a>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-ar="أجزاءالمحركات" data-en="Engine parts" href="#" id="navbarDropdown"
+            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            أجزاء المحركات
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" data-ar="المحركات الصغيرة" data-en="Small Engine" href="#">المحركات الصغيرة</a></li>
+            <li><a class="dropdown-item" data-ar="المحركات المتوسطه" data-en="Medium engines" href="#">المحركات المتوسطة</a></li>
+            <li><a class="dropdown-item" data-ar="المحركات الكبيره" data-en="large Engine" href="#">المحركات الكبيرة</a></li>
+            <li><a class="dropdown-item" data-ar="صيانه المحركات " data-en="Engine maintenance" href="#">صيانة المحركات</a></li>
+          </ul>
+        </li>
+
+        <!-- Cart in large screens -->
+        <li class="nav-item d-none d-lg-block">
+          <a href="cartProducts.html" class="position-relative d-inline-block">
+            <i class="fa-solid fa-cart-shopping fs-4 text-primary"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              1
+              <span class="visually-hidden">cart items</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Buttons -->
+      <div class="d-flex gap-2 justify-content-center mt-4 mt-lg-0 pb-4 pb-lg-0">
+        <a href="#contact" class="btn btn-danger" data-en="Get In Touch" data-ar="تواصل معنا">تواصل معنا</a>
+        <div class="language-switcher">
+          <select id="language-select" class="form-select">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+          </select>
         </div>
       </div>
-
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- Hero Content -->
   <div class="container text-center mt-5 mt-lg-0" id="home">
@@ -338,12 +352,12 @@
 
 <div class="fixed-contact-buttons">
   <!-- WhatsApp -->
-        <a href="https://wa.me/01017799332" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
+        <a href="https://wa.me/201017799332" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
           <i class="fab fa-whatsapp"></i>
         </a>
 
         <!-- Phone -->
-        <a href="tel:01017799332" class="phone-button" aria-label="Call Us">
+        <a href="tel:+201017799332" class="phone-button" aria-label="Call Us">
           <i class="fas fa-phone-alt"></i>
         </a>
         <button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top" class="scroll-top">
