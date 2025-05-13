@@ -462,7 +462,9 @@ form button:hover{
     outline: none;
     transition: all .5s;
 }
-
+.form-select:focus {
+    box-shadow: none;
+}
  .GMT{
   max-height: 100px; 
   object-fit: cover;
