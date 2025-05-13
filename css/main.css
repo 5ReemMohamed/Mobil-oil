@@ -481,3 +481,7 @@ form button:hover{
   color: white;
   font-size: 25px;
 }
+
+.bg-darkGray{
+  background-color: #eee;
+}
