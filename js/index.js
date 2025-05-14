@@ -5,6 +5,7 @@ window.addEventListener('load', function () {
       window.scrollTo(0, 0);
     }
   });
+
 document.addEventListener("DOMContentLoaded", () => {
   const scrollToTopBtn = document.querySelector("#scrollToTopBtn");
    if (document.body.scrollTop <= 100 && document.documentElement.scrollTop <= 100) {
@@ -89,6 +90,8 @@ if (navbarCollapse && navbar) {
   window.addEventListener('scroll', handleNavbarState);
   handleNavbarState();
 
+
+
   const form = document.getElementById("contactForm");
   const nameInput = document.getElementById("UserName");
   const emailInput = document.getElementById("UserEmail");
@@ -169,6 +172,7 @@ if (navbarCollapse && navbar) {
       }
     });
   }
+
 
   // AOS animation init
   AOS.init({
