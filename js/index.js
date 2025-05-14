@@ -67,18 +67,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setLanguage('ar');
 
-  const navbar = document.querySelector('.hero-navbar');
-  const navbarCollapse = document.getElementById('navbarNav');
+ const navbar = document.querySelector('.hero-navbar');
+const navbarCollapse = document.getElementById('navbarNav');
 
-  if (navbarCollapse && navbar) {
-    navbarCollapse.addEventListener('show.bs.collapse', () => {
-      navbar.classList.add('scrolled');
-    });
+if (navbarCollapse && navbar) {
+  navbarCollapse.addEventListener('show.bs.collapse', () => {
+    navbar.classList.add('menu-open');
+  });
 
-    navbarCollapse.addEventListener('hide.bs.collapse', () => {
-      navbar.classList.remove('scrolled');
-    });
-  }
+  navbarCollapse.addEventListener('hide.bs.collapse', () => {
+    navbar.classList.remove('menu-open');
+  });
+}
 
   function handleNavbarState() {
     if (!navbar) return;
