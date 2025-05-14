@@ -53,11 +53,9 @@ h2{
 .navbar .fa-bars {
   transition: color 0.3s ease;
 }
-/* When menu is opened on mobile */
+
 .hero-navbar.menu-open .navbar-collapse {
   background-color: rgba(0, 0, 0, 0.9);
-
- 
 }
 
 .padding{
@@ -178,14 +176,12 @@ html[dir="ltr"] h1{
       color: #0d6efd;
 }
 
-
  video {
   width: 100%;
   height: auto;
   border-radius: 20px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
-
 
 .section-title {
   position: relative;
@@ -334,7 +330,7 @@ html[dir="ltr"] .product-detail-image{
   .motor-products .card p,
   .ships-products .card p {
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-line-clamp: 2; 
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -357,8 +353,8 @@ html[dir="ltr"] .product-detail-image{
   .motor-products .card,
   .ships-products .card {
     width: 100%;
-    padding: 15px 0;           /* Reduce vertical padding */
-    border-radius: 20px 20px 0 0; /* Optional: slightly rounder for small screens */
+    padding: 15px 0;           
+    border-radius: 20px 20px 0 0; 
   }
 .car-products .card img,
 .motor-products .card img,
@@ -501,7 +497,12 @@ form button:hover{
   gap: 15px;
   z-index: 1050;
 }
-
+.fixed-cart-button{
+   position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1050;
+}
 .whatsapp-button,.phone-button {
   width: 50px;
   height: 50px;
@@ -566,7 +567,7 @@ form button:hover{
     color: #0d6efd !important;
   }
 
-  /* Arabic font and direction */
+
   .ar {
     direction: rtl;
     text-align: right;

@@ -18,23 +18,16 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="100" tabindex="0">
 <header class="hero-section text-white">
-   <!-- Navbar Inside Header -->
   <nav class="navbar navbar-expand-lg hero-navbar navbar-dark position-fixed fixed-top z-3">
     <div class="container-fluid container-lg align-items-center">
-     <!-- Logo -->
     <a class="navbar-brand nav-logo" href="#">
       <img src="imgs/logo.png" alt="Logo" class="logo text-center">
     </a>
-
-    <!-- Toggle button for mobile -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="قائمة التنقل">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-      <!-- Links + Buttons -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- Centered Links -->
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center gap-lg-4 gap-2 text-center">
           <li class="nav-item">
             <a class="nav-link active" href="index.html#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
@@ -48,7 +41,6 @@
           <li class="nav-item">
             <a class="nav-link" href="index.html#products" data-ar="المنتجات" data-en="Products">المنتجات</a>
           </li>
-          <!-- Dropdown Menu -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-ar="أجزاءالمحركات" data-en="Engine parts" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               أجزاء المحركات
@@ -61,8 +53,6 @@
             </ul>
           </li>
         </ul>
-
-        <!-- Right-side Buttons -->
         <div class="d-flex gap-2 justify-content-center mt-4 mt-lg-0 pb-4 pb-lg-0">
           <a href="index.html#contact" class="btn btn-danger" data-en="Get In Touch" data-ar="تواصل معنا">تواصل معنا</a>
           <div class="language-switcher">
@@ -76,8 +66,6 @@
 
     </div>
   </nav>
-
-  <!-- Hero Content -->
   <div class="container text-center mt-5" id="home">
     <div class="row g-2 align-items-center">
       <div class="col-lg-6">
@@ -236,14 +224,12 @@
                   </div>
               </div>
           <div class="d-flex flex-column mt-4 align-items-center border-top border-white border-opacity-25 pt-4">
-        <!-- Text Column -->
         <div class="">
           <p data-ar="جميع الحقوق محفوظة 2025 &copy;  موبيل اويل للزيوت "data-en="© 2025 Mobile Oil Company. All Rights Reserved.">
           جميع الحقوق محفوظة 2025 &copy; موبيل اويل للزيوت.
           </p>
         </div>
 
-        <!-- Logo Column -->
         <div class="d-flex flex-column justify-content-center">
           <h6 class="text-center" data-en="Design and programming by" data-ar="تصميم وبرمجه">تصميم وبرمجه </h6>
         <div>
@@ -262,25 +248,26 @@
         </footer>
 
 <div class="fixed-contact-buttons">
-  <!-- WhatsApp -->
-         <a href="cartProducts.html" class="cart d-flex justify-content-center align-items-center">
-            <i class="fa-solid fa-cart-shopping fs-4 text-white"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              1
-              <span class="visually-hidden">cart items</span>
-            </span>
-        </a>
         <a href="https://wa.me/201017799332" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
           <i class="fab fa-whatsapp"></i>
         </a>
 
-        <!-- Phone -->
+        
         <a href="tel:+201017799332" class="phone-button" aria-label="Call Us">
           <i class="fas fa-phone-alt"></i>
         </a>
         <button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top" class="scroll-top">
           ↑
         </button>
+</div>
+<div class="fixed-cart-button">
+     <a href="cartProducts.html" class="cart d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-cart-shopping fs-4 text-white"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              1
+              <span class="visually-hidden">cart items</span>
+            </span>
+        </a>
 </div>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

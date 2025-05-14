@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Scroll to Top Button
+
   const scrollToTopBtn = document.querySelector("#scrollToTopBtn");
   if (scrollToTopBtn) {
     if (document.body.scrollTop <= 100 && document.documentElement.scrollTop <= 100) {
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (formSuccess) formSuccess.textContent = isRTL ? 'تم ارسال الرسالة' : 'Message sent successfully';
   }
 
-  // === Swiper Slider Init ===
+ 
   const sliderElement = document.querySelector(".mySwiper");
   let swiperInstance;
 
@@ -100,18 +100,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     updateFormPlaceholders();
-    initializeSwiper(); // re-init slider
+    initializeSwiper();
 
-    // Apply RTL/LTR class to body for styling adjustments
     document.body.classList.toggle('rtl', lang === 'ar');
   }
 
-  // Retrieve the saved language from localStorage or default to Arabic
+
   const savedLang = localStorage.getItem('selectedLang') || 'ar';
   langSelect.value = savedLang;
   setLanguage(savedLang);
 
-  // Listen for language change
+
   if (langSelect) {
     langSelect.addEventListener('change', (event) => {
       const selectedLang = event.target.value;
@@ -120,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Navbar scroll behavior
+
   const navbar = document.querySelector('.hero-navbar');
   const navbarCollapse = document.getElementById('navbarNav');
 
@@ -143,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('scroll', handleNavbarState);
   handleNavbarState();
 
-  // Form Validation
+
   const form = document.getElementById("contactForm");
   const nameInput = document.getElementById("UserName");
   const emailInput = document.getElementById("UserEmail");
