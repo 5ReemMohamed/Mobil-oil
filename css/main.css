@@ -56,6 +56,8 @@ h2{
 /* When menu is opened on mobile */
 .hero-navbar.menu-open .navbar-collapse {
   background-color: rgba(0, 0, 0, 0.9);
+
+ 
 }
 
 .padding{
@@ -164,7 +166,7 @@ html[dir="ltr"] h1{
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   z-index: 1000000;
 }
 
@@ -500,7 +502,7 @@ form button:hover{
   z-index: 1050;
 }
 
-.fixed-contact-buttons a {
+.whatsapp-button,.phone-button {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -516,10 +518,10 @@ form button:hover{
 }
 
 
-.fixed-contact-buttons a:hover {
+.whatsapp-button:hover,.phone-button:hover {
   background-color: #1da851;
 }
-.scroll-top{
+.scroll-top,.cart {
   background-color: #007bff;
   border: 1px solid #007bff;
   border-radius: 50%;
@@ -571,8 +573,8 @@ form button:hover{
     font-family: 'Cairo', sans-serif;
   }
 
-  .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-     --bs-gutter-x: 0rem; 
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+     --bs-gutter-x: 0rem !important; 
 }
 
 .offers-section{
@@ -590,6 +592,7 @@ form button:hover{
 }
 .swiper:active {
   cursor: grabbing;
+  
 }
 .swiper-slide {
   height: 60%;
@@ -620,3 +623,5 @@ form button:hover{
 .swiper-slide .slide-card h3{
   font-size: 18px;
 }
+
+

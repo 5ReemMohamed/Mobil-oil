@@ -22,35 +22,18 @@
 <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="100" tabindex="0">
     
 <header class="hero-section text-white">
-  <!-- Navbar Inside Header -->
+
 <nav class="navbar navbar-expand-lg hero-navbar navbar-dark position-fixed fixed-top">
-  <div class="container-fluid container-xl align-items-center">
-    
-    <!-- Logo -->
+  <div class="container align-items-center">
     <a class="navbar-brand nav-logo" href="#">
       <img src="imgs/logo.png" alt="Logo" class="logo text-center">
     </a>
-
-    <!-- Center Cart on small screens -->
-    <div class="d-lg-none mx-auto">
-      <a href="cartProducts.html" class="position-relative d-inline-block">
-        <i class="fa-solid fa-cart-shopping fs-3 text-primary"></i>
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          1
-          <span class="visually-hidden">cart items</span>
-        </span>
-      </a>
-    </div>
-
-    <!-- Toggle button for mobile -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="قائمة التنقل">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <!-- Navbar Links and Right Side -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <!-- Navbar links center -->
+      
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center gap-lg-4 gap-2 text-center">
         <li class="nav-item">
           <a class="nav-link active" href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
@@ -64,8 +47,6 @@
         <li class="nav-item">
           <a class="nav-link" href="#products" data-ar="المنتجات" data-en="Products">المنتجات</a>
         </li>
-
-        <!-- Dropdown -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-ar="أجزاءالمحركات" data-en="Engine parts" href="#" id="navbarDropdown"
             role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -78,20 +59,10 @@
             <li><a class="dropdown-item" data-ar="صيانه المحركات " data-en="Engine maintenance" href="#">صيانة المحركات</a></li>
           </ul>
         </li>
-
-        <!-- Cart in large screens -->
-        <li class="nav-item d-none d-lg-block">
-          <a href="cartProducts.html" class="position-relative d-inline-block">
-            <i class="fa-solid fa-cart-shopping fs-4 text-primary"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              1
-              <span class="visually-hidden">cart items</span>
-            </span>
-          </a>
-        </li>
+        
       </ul>
 
-      <!-- Buttons -->
+      
       <div class="d-flex gap-2 justify-content-center mt-4 mt-lg-0 pb-4 pb-lg-0">
         <a href="#contact" class="btn btn-danger" data-en="Get In Touch" data-ar="تواصل معنا">تواصل معنا</a>
         <div class="language-switcher">
@@ -106,7 +77,7 @@
 </nav>
 
 
-  <!-- Hero Content -->
+
   <div class="container text-center mt-5 mt-lg-0" id="home">
     <div class="row g-2 align-items-center">
       <div class="col-lg-6">
@@ -132,7 +103,7 @@
 <section class="offers-section py-5">
  <div class="container">
    <h2 class="text-center mb-5 fw-bold section-title" data-en="Featured Offers 💥" data-ar=" العروض المميزة💥">💥 العروض المميزة </h2>
-  <div class="swiper mySwiper"  dir="ltr">
+  <div class="swiper mySwiper" id="slider" dir="rtl">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="slide-card">
@@ -233,7 +204,7 @@
 <section id="about-us" class="about-us padding">
         <div class="container">
             <div class="row g-4 align-items-center">
-                <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="inner">
                         <h2 class="section-title" data-en=" who are we ?" data-ar="من نحن ؟">من نحن ؟</h2>
                         <h3 data-en="Mobil Oil " data-ar="موبيل اويل للزيوت">موبيل اويل  للزيوت</h3>
@@ -302,9 +273,9 @@
               </div>
 </section>
 <section class="products padding text-center border-top border-bottom" id="products">
-          <div class="container"  data-aos="fade-left" data-aos-delay="100">
+          <div class="container" >
             <h2 class="section-title" data-ar="المنتجات" data-en="Products">المنتجات</h2>
-            <div class="row g-4 mt-5 justify-content-center align-items-center">
+            <div class="row g-4 mt-5 justify-content-center align-items-center" data-aos="fade-bottom" data-aos-delay="200">
               <div class="col-md-6 col-lg-4">
                 <div class="card">
                   <a href="carProducts.html" target="_blank" class="img">
@@ -449,6 +420,7 @@
             تواصل معنا 
           </a>
         </div>
+          
       </div>
 
 
@@ -457,6 +429,13 @@
 
 <div class="fixed-contact-buttons">
   <!-- WhatsApp -->
+         <a href="cartProducts.html" class="cart d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-cart-shopping fs-4 text-white"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              1
+              <span class="visually-hidden">cart items</span>
+            </span>
+        </a>
         <a href="https://wa.me/201017799332" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
           <i class="fab fa-whatsapp"></i>
         </a>

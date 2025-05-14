@@ -1,27 +1,30 @@
 window.addEventListener('load', function () {
-    if (window.location.hash) {
-     
-      history.replaceState(null, null, ' ');
-      window.scrollTo(0, 0);
-    }
-  });
+  if (window.location.hash) {
+    history.replaceState(null, null, ' ');
+    window.scrollTo(0, 0);
+  }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Scroll to Top Button
   const scrollToTopBtn = document.querySelector("#scrollToTopBtn");
-   if (document.body.scrollTop <= 100 && document.documentElement.scrollTop <= 100) {
-       scrollToTopBtn.style.display = "none";
-   }
-   window.onscroll = function() {
-       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-           scrollToTopBtn.style.display = "block";
-       } else {
-           scrollToTopBtn.style.display = "none";
-       }
-   };
+  if (scrollToTopBtn) {
+    if (document.body.scrollTop <= 100 && document.documentElement.scrollTop <= 100) {
+      scrollToTopBtn.style.display = "none";
+    }
+    window.onscroll = function () {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    };
 
-   scrollToTopBtn.onclick = function() {
-       window.scrollTo({ top: 0, behavior: 'smooth' });
-   };
+    scrollToTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  }
+
   const langSelect = document.getElementById('language-select');
   const htmlElement = document.getElementById('lang-html');
 
@@ -44,6 +47,45 @@ document.addEventListener("DOMContentLoaded", () => {
     if (formSuccess) formSuccess.textContent = isRTL ? 'تم ارسال الرسالة' : 'Message sent successfully';
   }
 
+  // === Swiper Slider Init ===
+  const sliderElement = document.querySelector(".mySwiper");
+  let swiperInstance;
+
+  function initializeSwiper() {
+    if (!sliderElement) return;
+
+    const isRTL = document.documentElement.getAttribute("dir") === "rtl";
+    sliderElement.setAttribute("dir", isRTL ? "rtl" : "ltr");
+
+    if (swiperInstance) swiperInstance.destroy(true, true);
+
+    swiperInstance = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      grabCursor: true,
+      rtl: isRTL,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: false,
+        renderBullet: () => "",
+      },
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        992: { slidesPerView: 3 },
+        1200: { slidesPerView: 4 },
+      }
+    });
+  }
+
   function setLanguage(lang) {
     if (lang === 'ar') {
       htmlElement.setAttribute('lang', 'ar');
@@ -58,28 +100,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     updateFormPlaceholders();
+    initializeSwiper(); // re-init slider
+
+    // Apply RTL/LTR class to body for styling adjustments
+    document.body.classList.toggle('rtl', lang === 'ar');
   }
 
+  // Retrieve the saved language from localStorage or default to Arabic
+  const savedLang = localStorage.getItem('selectedLang') || 'ar';
+  langSelect.value = savedLang;
+  setLanguage(savedLang);
+
+  // Listen for language change
   if (langSelect) {
     langSelect.addEventListener('change', (event) => {
-      setLanguage(event.target.value);
+      const selectedLang = event.target.value;
+      localStorage.setItem('selectedLang', selectedLang);
+      setLanguage(selectedLang);
     });
   }
 
-  setLanguage('ar');
+  // Navbar scroll behavior
+  const navbar = document.querySelector('.hero-navbar');
+  const navbarCollapse = document.getElementById('navbarNav');
 
- const navbar = document.querySelector('.hero-navbar');
-const navbarCollapse = document.getElementById('navbarNav');
+  if (navbarCollapse && navbar) {
+    navbarCollapse.addEventListener('show.bs.collapse', () => {
+      navbar.classList.add('menu-open');
+    });
 
-if (navbarCollapse && navbar) {
-  navbarCollapse.addEventListener('show.bs.collapse', () => {
-    navbar.classList.add('menu-open');
-  });
-
-  navbarCollapse.addEventListener('hide.bs.collapse', () => {
-    navbar.classList.remove('menu-open');
-  });
-}
+    navbarCollapse.addEventListener('hide.bs.collapse', () => {
+      navbar.classList.remove('menu-open');
+    });
+  }
 
   function handleNavbarState() {
     if (!navbar) return;
@@ -90,8 +143,7 @@ if (navbarCollapse && navbar) {
   window.addEventListener('scroll', handleNavbarState);
   handleNavbarState();
 
-
-
+  // Form Validation
   const form = document.getElementById("contactForm");
   const nameInput = document.getElementById("UserName");
   const emailInput = document.getElementById("UserEmail");
@@ -173,8 +225,7 @@ if (navbarCollapse && navbar) {
     });
   }
 
-
-  // AOS animation init
+  // AOS Init
   AOS.init({
     offset: 120,
     duration: 1000,
