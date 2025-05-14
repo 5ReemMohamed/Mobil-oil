@@ -26,17 +26,6 @@
       <img src="imgs/logo.png" alt="Logo" class="logo text-center">
     </a>
 
-    <!-- Center Cart on small screens -->
-    <div class="d-lg-none mx-auto">
-      <a href="cartProducts.html" class="position-relative d-inline-block">
-        <i class="fa-solid fa-cart-shopping fs-3 text-primary"></i>
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          1
-          <span class="visually-hidden">cart items</span>
-        </span>
-      </a>
-    </div>
-
     <!-- Toggle button for mobile -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="قائمة التنقل">
@@ -71,16 +60,6 @@
               <li><a class="dropdown-item" data-ar="صيانه المحركات " data-en="Engine maintenance" href="#">صيانة المحركات</a></li>
             </ul>
           </li>
-            <!-- Cart in large screens -->
-        <li class="nav-item d-none d-lg-block">
-          <a href="cartProducts.html" class="position-relative d-inline-block">
-            <i class="fa-solid fa-cart-shopping fs-4 text-primary"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              1
-              <span class="visually-hidden">cart items</span>
-            </span>
-          </a>
-        </li>
         </ul>
 
         <!-- Right-side Buttons -->
@@ -99,7 +78,7 @@
   </nav>
 
   <!-- Hero Content -->
-  <div class="container text-center mt-5 mt-lg-0" id="home">
+  <div class="container text-center mt-5" id="home">
     <div class="row g-2 align-items-center">
       <div class="col-lg-6">
         <div class="inner shadow-sm" data-aos="zoom-in" data-aos-delay="100">
@@ -284,6 +263,13 @@
 
 <div class="fixed-contact-buttons">
   <!-- WhatsApp -->
+         <a href="cartProducts.html" class="cart d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-cart-shopping fs-4 text-white"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              1
+              <span class="visually-hidden">cart items</span>
+            </span>
+        </a>
         <a href="https://wa.me/201017799332" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
           <i class="fab fa-whatsapp"></i>
         </a>
@@ -296,7 +282,6 @@
           ↑
         </button>
 </div>
-
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="js/index.js"></script> <!-- هنا تهيئة Splide -->
