@@ -671,7 +671,7 @@ footer .gmt-logo{
   pointer-events: none;
   z-index: 0; 
    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2), transparent);
-  filter: blur(6px);
+  filter: blur(7px);
 }
 .product-detail .img{
   position: relative;
