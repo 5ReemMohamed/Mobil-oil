@@ -319,7 +319,9 @@ html[dir="ltr"] .media-item .video2{
 html[dir="ltr"] .product-detail-image{
   transform: scalex(1);
 }
-
+footer .links a{
+  font-size: 12px !important;
+}
 
 @media (max-width: 768px) {
   .media-grid {
@@ -342,10 +344,13 @@ html[dir="ltr"] .product-detail-image{
     text-overflow: ellipsis;
   }
 
- .car-products .card h3,
-.motor-products .card h3,
-.ships-products .card h3{
- font-size: 16px;
+  .car-products .card h3,
+  .motor-products .card h3,
+  .ships-products .card h3{
+  font-size: 16px;
+  }
+  footer .links a{
+  font-size: 16px !important;
 }
 
 }
@@ -451,6 +456,7 @@ object-fit: cover;
  .hero-navbar.menu-open .navbar-collapse {
   background-color:transparent;
 }
+
 }
 
 .slider-container img:hover {
