@@ -670,8 +670,8 @@ footer .gmt-logo{
   border-radius: 50%;
   pointer-events: none;
   z-index: 0; 
-   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3), transparent);
-  filter: blur(7px);
+   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2), transparent);
+  filter: blur(6px);
 }
 .product-detail .img{
   position: relative;
