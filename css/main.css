@@ -377,16 +377,17 @@ footer .links a{
 .ships-products .card .img::after{
  content: "";
   position: absolute;
-  bottom: 0px; /* shadow offset below image */
+  bottom: 12px;
   left: 50%;
   transform: translateX(-50%);
-  width: 60%;
+  width: 38%;
   height: 20px;
-  border-radius: 50%;
+   border-radius: 50%;
   pointer-events: none;
-  z-index: 0; /* ensures it's behind the image */
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2), transparent);
-   filter: blur(10px); /* Adjust blur as needed */
+  z-index: 0; 
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+ filter: blur(5px);
+ opacity: .3;
 }
 .car-products .card img,
 .motor-products .card img,
@@ -395,6 +396,8 @@ footer .links a{
   display: block;
   margin: 10px auto;
   object-fit: cover;
+  margin-top: 10px;
+  padding: 10px;
 }
 .products .card .img
 {
@@ -457,7 +460,9 @@ object-fit: cover;
  .hero-navbar.menu-open .navbar-collapse {
   background-color:transparent;
 }
-
+footer .links a{
+  font-size: 17px !important;
+}
 }
 
 .slider-container img:hover {
