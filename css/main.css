@@ -662,7 +662,7 @@ footer .gmt-logo{
 .swiper-slide .img::after,.product-detail .img::after {
  content: "";
   position: absolute;
-  bottom: 3px; 
+  bottom: 0px; 
   left: 50%;
   transform: translateX(-50%);
   width: 40%;
