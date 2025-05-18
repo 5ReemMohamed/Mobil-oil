@@ -651,7 +651,6 @@ footer .gmt-logo{
 
 .swiper-slide .img{
     position: relative;
-    
 }
 .swiper-slide img {
   width: 40%;
@@ -661,19 +660,18 @@ footer .gmt-logo{
   padding: 10px;
 }
 .swiper-slide .img::after,.product-detail .img::after {
-  content: "";
+ content: "";
   position: absolute;
-  bottom: 7px; 
+  bottom: 0px; 
   left: 50%;
   transform: translateX(-50%);
-  width: 36%;
-  height: 18px;
+  width: 40%;
+  height: 20px;
   border-radius: 50%;
   pointer-events: none;
-  z-index: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.4));
-  filter: blur(5px);
-  opacity: 0.9;
+  z-index: 0; 
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2), transparent);
+ filter: blur(5px);
 }
 .product-detail .img{
   position: relative;
