@@ -386,6 +386,7 @@ footer .links a{
   pointer-events: none;
   z-index: 0; /* ensures it's behind the image */
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2), transparent);
+   filter: blur(10px); /* Adjust blur as needed */
 }
 .car-products .card img,
 .motor-products .card img,
@@ -650,9 +651,10 @@ footer .gmt-logo{
 
 .swiper-slide .img{
     position: relative;
+    padding: 10px;
 }
 .swiper-slide img {
-  width: 60%;
+  width: 40%;
   height: 100%;
   object-fit: cover;
   margin-top: 10px;
@@ -660,15 +662,16 @@ footer .gmt-logo{
 .swiper-slide .img::after,.product-detail .img::after {
  content: "";
   position: absolute;
-  bottom: -10px; /* shadow offset below image */
+  bottom: -10px; 
   left: 50%;
   transform: translateX(-50%);
   width: 60%;
   height: 20px;
   border-radius: 50%;
   pointer-events: none;
-  z-index: 0; /* ensures it's behind the image */
+  z-index: 0; 
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2), transparent);
+  filter: blur(10px); 
 }
 .product-detail .img{
   position: relative;
