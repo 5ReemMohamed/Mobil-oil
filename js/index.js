@@ -79,9 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
         renderBullet: () => "",
       },
       breakpoints: {
-        768: { slidesPerView: 2 },
-        992: { slidesPerView: 3 },
-        1200: { slidesPerView: 4 },
+        400:{slidesPerView:1},
+        500: { slidesPerView: 2 },
+        800:{slidesPerView:3},
+        992: { slidesPerView: 4 },
+        1200: { slidesPerView: 5 },
       }
     });
   }

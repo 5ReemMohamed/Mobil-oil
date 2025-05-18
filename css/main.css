@@ -640,6 +640,7 @@ footer .gmt-logo{
   
 }
 .swiper-slide {
+  width: 40%;
   height: 60%;
   display: flex;
   justify-content: center;
@@ -658,7 +659,7 @@ footer .gmt-logo{
     position: relative;
 }
 .swiper-slide img {
-  width: 40%;
+  width: 60%;
   height: 100%;
   object-fit: cover;
   margin-top: 10px;
@@ -754,6 +755,11 @@ footer .icons a{
   position: relative;
   overflow: hidden;
   z-index: 0;
+}
+.old-price{
+  font-size: 18px;
+  text-decoration: line-through;
+  color: #969696;
 }
 .part .inner::after{
 content: "";
