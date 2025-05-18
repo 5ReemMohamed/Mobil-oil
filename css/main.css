@@ -71,6 +71,7 @@ h2{
   justify-content: center;
   align-items: center;
   z-index: 1;
+  padding-top: 60px;
 }
 
 .nav-logo{
@@ -440,6 +441,10 @@ object-fit: cover;
   transition: transform 0.3s, filter 0.3s, opacity 0.3s;
 }
 @media screen and (min-width : 992px) {
+  .hero-section {
+ 
+  padding-top: 0px;
+}
  .slider-container img{
   width: 15%;
  }
