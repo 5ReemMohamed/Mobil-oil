@@ -48,45 +48,58 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
  
-  const sliderElement = document.querySelector(".mySwiper");
-  let swiperInstance;
+const sliderElement = document.querySelector(".mySwiper");
+let swiperInstance;
 
-  function initializeSwiper() {
-    if (!sliderElement) return;
+function initializeSwiper() {
+  if (!sliderElement) return;
 
-    const isRTL = document.documentElement.getAttribute("dir") === "rtl";
-    sliderElement.setAttribute("dir", isRTL ? "rtl" : "ltr");
+  const isRTL = document.documentElement.getAttribute("dir") === "rtl";
+  sliderElement.setAttribute("dir", isRTL ? "rtl" : "ltr");
 
-    if (swiperInstance) swiperInstance.destroy(true, true);
+  if (swiperInstance) swiperInstance.destroy(true, true);
 
-    swiperInstance = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true,
-      grabCursor: true,
-      rtl: isRTL,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: false,
-        renderBullet: () => "",
-      },
-      breakpoints: {
-        400:{slidesPerView:1},
-        500: { slidesPerView: 2 },
-        800:{slidesPerView:3},
-        992: { slidesPerView: 4 },
-        1200: { slidesPerView: 5 },
-      }
-    });
-  }
+  swiperInstance = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    grabCursor: true,
+    rtl: isRTL,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: false,
+      renderBullet: () => "",
+    },
+    breakpoints: {
+      400: { slidesPerView: 1 },
+      500: { slidesPerView: 2 },
+      800: { slidesPerView: 3 },
+      992: { slidesPerView: 4 },
+      1200: { slidesPerView: 5 },
+    }
+  });
+
+  sliderElement.addEventListener("mouseenter", () => {
+    swiperInstance.autoplay.stop();
+  });
+
+ 
+  sliderElement.addEventListener("mouseleave", () => {
+    swiperInstance.autoplay.start();
+  });
+}
+
+
+initializeSwiper();
+
 
   function setLanguage(lang) {
     if (lang === 'ar') {
